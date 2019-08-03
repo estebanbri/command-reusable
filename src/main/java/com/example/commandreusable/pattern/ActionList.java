@@ -12,6 +12,10 @@ public class ActionList implements Action, List<Action> {
         actionList = new LinkedList();
     }
 
+    public ActionList(Collection<Action> actionList) {
+        this.actionList = new LinkedList<Action>(actionList);
+    }
+
     @Override
     public boolean add(Action action) {
         return actionList.add(action);

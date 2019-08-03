@@ -4,10 +4,12 @@ public class PersonaDTO {
 
     private String nombre;
     private String apellido;
+    private int edad;
 
-    public PersonaDTO(String nombre, String apellido) {
+    public PersonaDTO(String nombre, String apellido, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.edad = edad;
     }
 
     public String getNombre() {
@@ -26,11 +28,20 @@ public class PersonaDTO {
         this.apellido = apellido;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     @Override
     public String toString() {
         return "PersonaDTO{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
                 '}';
     }
 }

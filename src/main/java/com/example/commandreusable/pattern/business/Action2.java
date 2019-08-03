@@ -5,7 +5,6 @@ import com.example.commandreusable.pattern.dto.PersonaDTO;
 import com.example.commandreusable.pattern.util.Container;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 public class Action2 implements Action {

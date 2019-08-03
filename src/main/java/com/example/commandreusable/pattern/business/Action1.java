@@ -12,18 +12,18 @@ import java.util.List;
 @Service
 public class Action1 implements Action {
 
-//    private List<PersonaDTO> getPersonasDTO(){
-//        return Arrays.asList(
-//                new PersonaDTO("Esteban","Briceno"),
-//                new PersonaDTO("Andres","Sati"));
-//    }
-
     @Override
     public void execute(Container container) {
         System.out.println("******  EJECUTANDO: Action1");
         System.out.println("*********    Inicializando PersonaDTO...");
-        PersonaDTO persona = new PersonaDTO("Esteban","Briceno");
+        List<PersonaDTO> personas = callDB();
         System.out.println("*********    Almacenando PersonaDTO dentro del Container...");
-        container.saveValue(PersonaDTO.class, persona);
+        container.saveValue(PersonaDTO.class, personas);
+    }
+
+    private List<PersonaDTO> callDB(){
+        return Arrays.asList(
+                new PersonaDTO("Esteban","Briceno", 17),
+                new PersonaDTO("Andres","Sati", 30));
     }
 }
