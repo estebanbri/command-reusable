@@ -17,16 +17,16 @@ public class ActionList implements Action, List<Action> {
     }
 
     @Override
-    public boolean add(Action action) {
-        return actionList.add(action);
-    }
-
-    @Override
     public void execute(Container container) {
         System.out.println("***  EJECUTANDO: ActionList");
         for(Action action: actionList){
             action.execute(container);
         }
+    }
+
+    @Override
+    public boolean add(Action action) {
+        return actionList.add(action);
     }
 
     @Override
